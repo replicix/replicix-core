@@ -23,7 +23,7 @@ from the newest synced commit to find later changes.
 - `StoreError` -> `Error` with only `ObjectStore`, `CasConflict`, `Meta`, `Json`, `Io`, `AwsCredentials` (same messages).
 - `classify`: the arms for the other `StoreError` variants are replaced by `register_error_classifier`.
 - Wall time: `constellation_platform::clock::protocol().wall()` -> the `clock::Clock` trait (`SystemClock` default, `set_clock` to inject).
-- Environment overrides renamed `REPLICIX_*`; a legacy prefix can be registered (`set_legacy_env_prefix`).
+- Environment overrides renamed `REPLICIX_*`.
 - `layout::lease` -> `lease::lease_path`.
 - `aws_auth` test no longer builds a `ChunkStore`; it issues a plain GET.
 - Not moved: `layout.rs` (bucket layout), heartbeat, designation, nodes, everything that needs `fs-core` or `mtree`.

@@ -257,23 +257,17 @@ clock must have installed the adapter in its process, or the fault offset is sil
 sites that call `constellation_store_s3::lease::now_unix_ms` (engine `gc`, `snapsched`, `shipper`,
 `holds`, `leave`, `mtree_gc`, `control/snapsched*`) only change path.
 
-### 2.6 Legacy environment names
+### 2.6 Environment names
 
-The moved code reads `REPLICIX_*`. Constellation's documented `CONSTELLATION_LEASE_TTL_MS`,
-`CONSTELLATION_CAS_BUSY_RETRIES`, `CONSTELLATION_S3_MAX_RETRIES`,
-`CONSTELLATION_S3_RETRY_TIMEOUT_MS` and `CONSTELLATION_MAX_DECOMPRESSED_BYTES` (configuration
-reference, harness scenarios, engine tests) keep working by registering the prefix, once, first
-thing in every binary and in every test process that sets one of them in-process:
-
-```rust
-replicix_objcas::set_legacy_env_prefix("CONSTELLATION");
-replicix_chunkfmt::set_legacy_env_prefix("CONSTELLATION");
-```
-
-`REPLICIX_*` wins if both are set. `codec::MAX_DECOMPRESSED_ENV` is now
-`"REPLICIX_MAX_DECOMPRESSED_BYTES"` (the fuzz targets `store_object` and `store_inbox_pack` set it
-and keep working apart from the path). The decompression ceiling is read once, so register before
-the first decode.
+The moved code reads only `REPLICIX_*`; there is no legacy-prefix support (decided
+2026-11-12: no backwards compatibility). Rename Constellation's
+`CONSTELLATION_LEASE_TTL_MS`, `CONSTELLATION_CAS_BUSY_RETRIES`,
+`CONSTELLATION_S3_MAX_RETRIES`, `CONSTELLATION_S3_RETRY_TIMEOUT_MS` and
+`CONSTELLATION_MAX_DECOMPRESSED_BYTES` to the `REPLICIX_` names everywhere they are set or
+documented: the configuration reference, harness scenarios, engine tests and the fuzz targets
+`store_object` and `store_inbox_pack`. `codec::MAX_DECOMPRESSED_ENV` is
+`"REPLICIX_MAX_DECOMPRESSED_BYTES"`. The decompression ceiling is read once per process, so a
+test that sets it in-process must do so before the first decode.
 
 ## 3. Signature and type differences callers must adapt to
 

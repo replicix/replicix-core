@@ -7,9 +7,8 @@
 //!
 //! Nothing here knows about a particular file system or volume layout;
 //! application errors join the classifier through
-//! [`classify::register_error_classifier`], application time through
-//! [`clock::set_clock`] and legacy environment names through
-//! [`env::set_legacy_env_prefix`].
+//! [`classify::register_error_classifier`] and application time through
+//! [`clock::set_clock`].
 
 pub mod aws_auth;
 pub mod cas;
@@ -35,7 +34,6 @@ pub use classify::{
     classify, classify_chain, classify_message, register_error_classifier, ErrorClass,
 };
 pub use clock::{Clock, SystemClock};
-pub use env::set_legacy_env_prefix;
 pub use error::Error;
 pub use lease::{
     fence_retired, live_leases_held_by, AckPolicy, InheritedTail, Lease, LeaseMode, LeaseStore,

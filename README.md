@@ -24,7 +24,7 @@ tests pin the formats against fixtures produced by Constellation's own code.
 `LeaseMode::{Cas, SingleWriter}`; `probe_cas_semantics`; `preflight::{preflight, probe_conditional_writes}`;
 `Clock`/`set_clock` (the system clock unless injected); `Error`. Environment overrides:
 `REPLICIX_LEASE_TTL_MS`, `REPLICIX_CAS_BUSY_RETRIES`, `REPLICIX_S3_MAX_RETRIES`,
-`REPLICIX_S3_RETRY_TIMEOUT_MS`; `set_legacy_env_prefix` also honours `<PREFIX>_<NAME>`.
+`REPLICIX_S3_RETRY_TIMEOUT_MS`.
 
 **chunkfmt.** `ChunkHash::{of, keyed, to_hex, from_hex}`, `ChunkLayout::{chunk_count, chunk_len, slices}`;
 `format::{encode_object, decode_object, StreamingDecoder}`; `Codec`, `CompressionSetting` (`raw`, `zstd:N`,

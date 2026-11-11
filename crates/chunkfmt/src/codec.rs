@@ -25,8 +25,7 @@ pub const MAX_DECOMPRESSED_ENV: &str = "REPLICIX_MAX_DECOMPRESSED_BYTES";
 pub const DEFAULT_MAX_DECOMPRESSED_LEN: u64 = 1 << 30;
 
 /// Ceiling on the plaintext one stored object may decompress to (env
-/// `REPLICIX_MAX_DECOMPRESSED_BYTES`, or the registered legacy prefix
-/// ([`crate::set_legacy_env_prefix`]), default 1 GiB).
+/// `REPLICIX_MAX_DECOMPRESSED_BYTES`, default 1 GiB).
 ///
 /// This is a memory-safety bound, not a format limit. Neither a header's
 /// declared length nor a frame's own content size can be trusted — a zstd
@@ -62,13 +61,9 @@ pub fn max_decompressed_len() -> u64 {
 /// it, so a legitimately huge object does not read as plain corruption.
 pub(crate) fn ceiling_error(what: &str, len: u64) -> Error {
     Error::CorruptObject(format!(
-        "{what} {len} exceeds the {}-byte decompression ceiling (set {MAX_DECOMPRESSED_ENV}{} \
+        "{what} {len} exceeds the {}-byte decompression ceiling (set {MAX_DECOMPRESSED_ENV} \
          to raise it if the object is legitimate)",
         max_decompressed_len(),
-        match crate::env::legacy_env_prefix() {
-            Some(p) => format!(" or {p}_MAX_DECOMPRESSED_BYTES"),
-            None => String::new(),
-        }
     ))
 }
 

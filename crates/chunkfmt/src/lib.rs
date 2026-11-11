@@ -27,5 +27,4 @@ pub use e2e::{
     create_keyring_block, unlock, Argon2Params, E2eKeys, KeyDomain, KeyringBlock, ReplicixDomain,
     SharedE2eKeys,
 };
-pub use env::set_legacy_env_prefix;
 pub use error::Error;

@@ -18,5 +18,5 @@ below against this crate to find them.
 - `StoreError` -> `Error` (`CorruptObject`, `UnknownCodec`, `Compression`, `Keyring` (was `Meta`), `Io`). Two messages say "upgrade this software" instead of naming the product.
 - `e2e`: the derivation labels are a type parameter (`KeyDomain`) instead of constants; `TreeSealing` stays in Constellation. Derived bytes are identical for a domain carrying Constellation's labels (golden tests).
 - `codec`: `CODEC_LZ4 = 2` and `Codec::Lz4` behind the `lz4` feature (off by default; with it off, id 2 is an unknown codec as before).
-- `codec::MAX_DECOMPRESSED_ENV` is `REPLICIX_MAX_DECOMPRESSED_BYTES`; a legacy prefix can be registered.
+- `codec::MAX_DECOMPRESSED_ENV` is `REPLICIX_MAX_DECOMPRESSED_BYTES`.
 - `ChunkHash::keyed` etc. unchanged.

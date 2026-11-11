@@ -281,8 +281,7 @@ pub async fn amazon_s3_builder_resolved_with(
 /// write-through upload no peer can take over). Every caller has its own
 /// retry loop (sync rounds, uploads, lease renewals), so one request
 /// series gives up after 30 s (`REPLICIX_S3_RETRY_TIMEOUT_MS`,
-/// `REPLICIX_S3_MAX_RETRIES`, or the same names under the registered legacy
-/// prefix, override it).
+/// `REPLICIX_S3_MAX_RETRIES` override it).
 pub fn configure_s3_client(builder: AmazonS3Builder) -> AmazonS3Builder {
     let mut retry = object_store::RetryConfig {
         retry_timeout: Duration::from_secs(30),
