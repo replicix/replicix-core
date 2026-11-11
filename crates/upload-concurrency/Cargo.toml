@@ -1,0 +1,13 @@
+[package]
+name = "replicix-upload-concurrency"
+description = "Adaptive concurrency policy and gate for chunk uploads"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+tokio = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["test-util"] }

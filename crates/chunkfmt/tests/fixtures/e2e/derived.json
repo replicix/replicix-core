@@ -1,0 +1,11 @@
+{
+  "addressing": "bacae6ee2db116bebda1043d86a60e6bfcaeb03e84abd815c03c9bb37eb7e037",
+  "dek_empty": "8e0b6f1742b479e8141a5197872a6f84969f41639b902e6cfe118dccc4dcbdc6",
+  "dek_long": "33ce763fdc8c670848f7fe40fcbb954bb4e378f4d8da66ec89203e4bb4f2b540",
+  "dek_mtree_nodes": "8bb25d27a7a1fca1de7e4b07799a4c67c3a0c140b39149d4eb55337d5a86254b",
+  "dek_p0": "9978cced09afb034d148c9a0ca1e4008faabb5c3265afe61b7e79e0e9c306c7f",
+  "gossip": "93c096127b5899d858fb5d920feb49510aff77c1a0fd56bddf06414eaa516ffc",
+  "keyed_hash_text": "07c51feec1da4e610c8c0e5f34773606ab591b9e01eceb3f338b584947887841",
+  "pin": "0a795accb0e3e3a7bf8d5c6b54bbb2e4293fd942eb654e3e56cbfd2b87cb52c9",
+  "pin_uuid": "00000000-0000-4000-8000-000000000001"
+}

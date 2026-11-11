@@ -1,0 +1,27 @@
+[package]
+name = "replicix-objcas"
+description = "Conditional writes over object_store: CAS semantics, error classification, S3 client construction, leases, probes and preflight"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+bytes.workspace = true
+futures.workspace = true
+object_store.workspace = true
+aws-config.workspace = true
+aws-credential-types.workspace = true
+aws-types.workspace = true
+async-trait.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+uuid.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+anyhow = "1.0.104"
+serde_json.workspace = true
+tokio = { workspace = true, features = ["test-util"] }

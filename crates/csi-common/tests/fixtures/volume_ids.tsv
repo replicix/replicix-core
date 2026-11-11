@@ -1,0 +1,16 @@
+ok	v1/pool/2/4f9c1e2a-0b1c-4d5e-8f90-1a2b3c4d5e6f/volumes/pvc-1a2b	4f9c1e2a-0b1c-4d5e-8f90-1a2b3c4d5e6f|/volumes/pvc-1a2b
+ok	v1/dedicated/4f9c1e2a-0b1c-4d5e-8f90-1a2b3c4d5e6f/	4f9c1e2a-0b1c-4d5e-8f90-1a2b3c4d5e6f|/
+ok	4f9c1e2a-0b1c-4d5e-8f90-1a2b3c4d5e6f/a/b	4f9c1e2a-0b1c-4d5e-8f90-1a2b3c4d5e6f|/a/b
+ok	4f9c1e2a-0b1c-4d5e-8f90-1a2b3c4d5e6f/	4f9c1e2a-0b1c-4d5e-8f90-1a2b3c4d5e6f|/
+ok	v1/pool/2/4f9c1e2a-0b1c-4d5e-8f90-1a2b3c4d5e6f/volumes/pvc-1a2b@snap-1	/volumes/pvc-1a2b@snap-1
+bad		
+bad	nopath	
+bad	v2/pool/0/x/volumes/n	
+bad	v1/pool/01/x/volumes/n	
+bad	v1/pool/0/x/other/n	
+bad	v1/pool/0/x/volumes/..	
+bad	v1/dedicated/x	
+bad	v1/weird/x	
+bad	u/../x	
+bad	a b/c	
+bad	x/@y	

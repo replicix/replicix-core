@@ -1,0 +1,47 @@
+[
+  {
+    "bucket": "b"
+  },
+  {
+    "chunkSize": "4MiB",
+    "writeMode": "strict",
+    "endpoint": "http://s3.example:9000",
+    "region": "eu-west-1",
+    "prefix": "/team/x/",
+    "shards": "4",
+    "bucket": "b",
+    "compression": "zstd:7",
+    "csi.storage.k8s.io/pvc/name": "ignored",
+    "e2e": "true"
+  },
+  {
+    "credentialSource": "aws-default-chain",
+    "bucket": "b",
+    "layout": "dedicated"
+  },
+  {
+    "credentialSecretNamespace": "ns",
+    "credentialSource": "refreshing",
+    "credentialSecretName": "creds",
+    "bucket": "b"
+  },
+  {
+    "bucket": "b",
+    "shards": "0"
+  },
+  {
+    "bucket": "a/b"
+  },
+  {
+    "bucket": "b",
+    "layout": "zfs"
+  },
+  {
+    "bucket": "b",
+    "chunkSize": "12parsecs"
+  },
+  {
+    "bucket": "b",
+    "surprise": "1"
+  }
+]

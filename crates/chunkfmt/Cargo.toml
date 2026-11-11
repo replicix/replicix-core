@@ -1,0 +1,29 @@
+[package]
+name = "replicix-chunkfmt"
+description = "Chunk identity, the CCH1 self-describing chunk object format, the codec registry and the E2E key hierarchy"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+default = []
+# Codec id 2 (LZ4 block format). Off by default: with it off, id 2 is an
+# unknown codec, as in the project this registry was extracted from.
+lz4 = ["dep:lz4_flex"]
+
+[dependencies]
+blake3.workspace = true
+zstd.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+rand.workspace = true
+chacha20poly1305.workspace = true
+argon2.workspace = true
+zeroize.workspace = true
+region.workspace = true
+tracing.workspace = true
+lz4_flex = { workspace = true, optional = true }
+
+[dev-dependencies]
+serde_json.workspace = true

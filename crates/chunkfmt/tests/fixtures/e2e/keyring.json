@@ -1,0 +1,9 @@
+{
+  "argon2_params": {
+    "m_cost_kib": 65536,
+    "t_cost": 3,
+    "p_cost": 1
+  },
+  "salt": "f95e8629ac72b6287c8d1fff01a3f948",
+  "wrapped_master": "01ef187782ed2ce81ec73574fe7d6f9a556372f30b5ad33cccf173b79af62eaf56798bf89b8107c3460ab0b972b34587437e029d928a6b33a686700d20a1b8a0900987aa2e767f2514"
+}

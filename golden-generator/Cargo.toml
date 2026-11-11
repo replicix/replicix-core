@@ -1,0 +1,13 @@
+# Built inside a copy of the Constellation workspace, never as part of
+# replicix-core (see README.md): it exercises Constellation's own code.
+[package]
+name = "golden-gen"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+constellation-store-s3 = { path = "../store-s3" }
+constellation-fs-core = { path = "../fs-core" }
+constellation-csi = { path = "../csi" }
+serde_json = "1"

@@ -1,0 +1,22 @@
+{
+  "empty": {
+    "keyed7": "29dc8692843c22e4bdc8f56a93c364a3c50a82df3887397a90c02c7da1636876",
+    "plain": "af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262"
+  },
+  "noise": {
+    "keyed7": "34b0d446fbc5a6226645b3f6557c823c47655fba828f5e64bdaf8ab16493c5cd",
+    "plain": "56338d24fa22134cf28f2cae8c8382e5332db8dc0922c82f76f8780bf9e5807b"
+  },
+  "single": {
+    "keyed7": "13b0e03b15656cfffb404b67dbdb0abbf7a58497a534d18ec1e89c0d74966992",
+    "plain": "3ae7d805f6789a6402acb70ad4096a85a56bf6804eaf25c0493ac697548d30b5"
+  },
+  "text": {
+    "keyed7": "42aba89dc275c79b2eece8b21e41f50d000547b2abdbf97fba87abd55454c4fb",
+    "plain": "1b35b8a9086939911a06a03151af8fd4d4565310a05d10fd03284ac48d8a2ffe"
+  },
+  "zeros64k": {
+    "keyed7": "a5e0ab4733d358a35253711d540628678a04fc14efe42331bdcacb091d2712a0",
+    "plain": "3bdeaf8f8e98780b318106aafdc3ca257f73df123d97b69112b26044c91a7d56"
+  }
+}

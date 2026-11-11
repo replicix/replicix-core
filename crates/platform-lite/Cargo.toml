@@ -1,0 +1,13 @@
+[package]
+name = "replicix-platform-lite"
+description = "Advisory file locks, local filesystem primitives and core-dump suppression"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[target.'cfg(unix)'.dependencies]
+libc.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

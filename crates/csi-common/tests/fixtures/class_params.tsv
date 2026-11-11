@@ -1,0 +1,9 @@
+0	Ok(ClassParams { bucket: "b", prefix: "constellation-csi", layout: Pool, shards: 1, endpoint: None, region: None, chunk_size: None, compression: None, e2e: false, write_mode: None, credentials: StaticEphemeral, credential_secret: None })	"constellation-csi"	"constellation-csi/vol"	0
+1	Ok(ClassParams { bucket: "b", prefix: "team/x", layout: Pool, shards: 4, endpoint: Some("http://s3.example:9000"), region: Some("eu-west-1"), chunk_size: Some(4194304), compression: Some("zstd:7"), e2e: true, write_mode: Some("strict"), credentials: StaticEphemeral, credential_secret: None })	"team/x/shard-1"	"team/x/vol"	1
+2	Ok(ClassParams { bucket: "b", prefix: "constellation-csi", layout: Dedicated, shards: 1, endpoint: None, region: None, chunk_size: None, compression: None, e2e: false, write_mode: None, credentials: AwsDefaultChain, credential_secret: None })	"constellation-csi"	"constellation-csi/vol"	0
+3	Ok(ClassParams { bucket: "b", prefix: "constellation-csi", layout: Pool, shards: 1, endpoint: None, region: None, chunk_size: None, compression: None, e2e: false, write_mode: None, credentials: Refreshing, credential_secret: Some(SecretRef { namespace: "ns", name: "creds" }) })	"constellation-csi"	"constellation-csi/vol"	0
+4	Err("shards \"0\" must be an integer in 1..=64")
+5	Err("bucket \"a/b\" must not contain '/'")
+6	Err("layout \"zfs\" is not one of \"pool\", \"dedicated\"")
+7	Err("chunkSize \"12parsecs\" must be a byte count like \"4MiB\"")
+8	Err("unknown StorageClass parameter(s): surprise")
