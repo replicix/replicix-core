@@ -17,6 +17,10 @@ pub const CODEC_ZSTD: u16 = 1;
 /// object header. Only decodable with the `lz4` feature; without it the id
 /// is an unknown codec, exactly as before it was assigned.
 pub const CODEC_LZ4: u16 = 2;
+/// Reserved: zstd with a dictionary named by the zstd frame's `dictID`
+/// (Lunix ADR-30). Not decodable yet; [`Codec::from_id`] treats it as an
+/// unknown codec. No other consumer may assign this id.
+pub const CODEC_ZSTD_DICT: u16 = 3;
 
 /// Env override for [`max_decompressed_len`].
 pub const MAX_DECOMPRESSED_ENV: &str = "REPLICIX_MAX_DECOMPRESSED_BYTES";
